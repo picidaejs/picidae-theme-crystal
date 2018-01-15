@@ -8,7 +8,7 @@ Crystal is a elegant theme of picidae
 
 ### Installation
 
-1. change dir to picidae root directory, if you have not yet inited picidae, go [there](https://github.com/picidaejs/picidaejs)
+1. change dir to **picidae root directory**, if you have not yet inited picidae, go [there](https://github.com/picidaejs/picidaejs)
 ```
 cd [picideaBlogRoot]
 ```
@@ -17,12 +17,12 @@ cd [picideaBlogRoot]
 ```
 cd themes
 ```
-3. clone crystal to local
+3. **clone crystal to local**
 ```
 git clone https://github.com/picidaejs/picidae-theme-crystal.git
 ```
   
-4. change dir to picidae-theme-crystal, and edit config.js
+4. change dir to picidae-theme-crystal, and **edit config.js**
 ```
 cd picidae-theme-crystal
 ```
