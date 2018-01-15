@@ -1,0 +1,19 @@
+{
+  "name": "jelly-theme",
+  "version": "1.0.0",
+  "description": "a gentle theme of picidae",
+  "main": "index.js",
+  "scripts": {
+    "test": "picidae start"
+  },
+  "keywords": [
+    "theme",
+    "picidae"
+  ],
+  "author": "Claiyre",
+  "license": "ISC",
+  "dependencies": {
+    "mdast-util-to-string": "^1.0.4",
+    "react-document-title": "^2.0.3"
+  }
+}
