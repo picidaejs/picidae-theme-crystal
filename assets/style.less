@@ -48,12 +48,24 @@ body, html {
   color: @font-color;
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 Link, a{
   text-decoration: none;
   color: inherit;
+}
+#root, .wrap{
+  min-height: 100%;
+}
+#root {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.wrap{
+  padding-bottom: 15rem;        //给footer留空间
 }
 header{
   width: 100%;
@@ -122,7 +134,8 @@ ul.nav{
 }
 footer{
   width: 100%;
-  margin-top: 4rem;
+  position: absolute;
+  bottom: 0;
   .footer-avatar{
     // background-color: #202020;
     .flex(row, center, center);
