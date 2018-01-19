@@ -1,17 +1,27 @@
 {
-  "name": "jelly-theme",
+  "name": "picidae-theme-crystal",
   "version": "1.0.0",
   "description": "a gentle theme of picidae",
   "main": "index.js",
   "scripts": {
-    "test": "picidae start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "theme",
-    "picidae"
+    "picidae",
+    "crystal"
   ],
-  "author": "Claiyre",
+  "author": "claiyre",
   "license": "ISC",
+  "homepage": "https://claiyre.github.io/",
+  "bugs": {
+    "url": "https://github.com/picidaejs/picidae-theme-crystal/issues",
+    "email": "mayingying1996@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picidaejs/picidae-theme-crystal"
+  },
   "dependencies": {
     "mdast-util-to-string": "^1.0.4",
     "react-document-title": "^2.0.3"

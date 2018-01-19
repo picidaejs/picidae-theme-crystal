@@ -1,7 +1,9 @@
 // import getPureText from './getPureText'
 var getPureText = require('./getPureText')
-var themeConfig = require('./config')
-
+var themeConfig = require('../../theme.config')
+if (!themeConfig) {
+  themeConfig = require('./config');
+}
 module.exports = {
   routes: {
     path: '/',

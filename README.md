@@ -12,25 +12,35 @@ Crystal is a elegant theme of picidae
 ```
 cd [picideaBlogRoot]
 ```
+2. run `npm install --save picidae-theme-crystal`
+3. edit `./picidae.config.js`
+```
+...
+theme: "picidae-theme-crystal",
+...
+```
 
-2. if there is not a directory named `themes`, create one, and then:
-```
-cd themes
-```
-3. **clone crystal to local**
-```
-git clone https://github.com/picidaejs/picidae-theme-crystal.git
-```
-  
-4. change dir to picidae-theme-crystal, and **edit config.js**
-```
-cd picidae-theme-crystal
-```
+4. run `picidae start/build` to see the new blog
+
+5. theme config
 
 default config
 ```
 pageSize: 6 ,
 title: 'Claiyre的个人博客',
-blogName: false,           // the text in the header of blog pages
-avatarUrl: 'avatar.png'   // put your avatar image under ~./extra/
+// the text in the header of blog pages
+blogName: false,
+// put your avatar image under ./extra
+avatarUrl: 'avatar.png'  
+// crystal use the gitment system
+gitment: {
+    owner: 'Claiyre',
+    repo: 'Claiyre.github.io',
+    oauth: {
+      client_id: 'xxx',
+      client_secret: 'xxxx'
+    }
+  }
 ```
+
+**You can also create a `theme.config.js` file under the root directory to overwrite the default config**
