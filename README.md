@@ -22,7 +22,7 @@ theme: "picidae-theme-crystal",
 
 4. run `picidae start/build` to see the new blog
 
-5. theme config
+### theme config
 
 default config
 ```
