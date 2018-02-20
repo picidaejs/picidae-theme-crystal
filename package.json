@@ -1,6 +1,6 @@
 {
   "name": "picidae-theme-crystal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a gentle theme of picidae",
   "main": "index.js",
   "scripts": {
