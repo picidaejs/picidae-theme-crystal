@@ -38,6 +38,7 @@ const View = (props) => {
   labels = labels.map(x => x.toLowerCase(x))
   labels = unique(labels).filter(Boolean)
 
+  const datetime = props.pageData.meta.date ? props.pageData.meta.date : props.pageData.meta.datetime;
   const commentProps = {
     ...themeConfig.gitment,
     id: location.pathname,
@@ -74,7 +75,7 @@ const View = (props) => {
               )}
               <div className="post-info-item">
                 <span className="icon-font">&#xe600;</span>
-                <time dateTime={props.pageData.meta.datetime}>{moment(props.pageData.meta.datetime).format('YYYY-MM-DD')}</time>
+                <time dateTime={datetime}>{moment(datetime).format('YYYY-MM-DD')}</time>
               </div>
             </div>
           </article>
