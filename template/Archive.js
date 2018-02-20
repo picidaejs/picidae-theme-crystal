@@ -29,10 +29,14 @@ export function group(data, name = '', keyword) {
     }
   }
   return group.sort((a, b) => {
-    let b_date = b.date ? b.date : b.datetime;
-    let a_date = a.date ? a.date : a.datetime;
-    
-    return (new Date(b_date).getTime() - new Date(a_date).getTime())
+    // for old articles
+    if (a.date) {
+      a.datetime = a.date;
+    }
+    if (b.date) {
+      b.datetime = b.date;
+    }
+    return new Date(b.datetime).getTime() - new Date(a.datetime).getTime()
   })
 }
 
