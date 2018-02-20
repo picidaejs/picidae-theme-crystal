@@ -28,9 +28,12 @@ export function group(data, name = '', keyword) {
       }
     }
   }
-  return group.sort((a, b) =>
-    new Date(b.datetime).getTime() - new Date(a.datetime).getTime()
-  )
+  return group.sort((a, b) => {
+    let b_date = b.date ? b.date : b.datetime;
+    let a_date = a.date ? a.date : a.datetime;
+    
+    return (new Date(b_date).getTime() - new Date(a_date).getTime())
+  })
 }
 
 export default ({data, render, publicPath, pluginData: {utils}, themeConfig: {pageSize = 2, title = 'Grass'}, params: {page = 1, keyword = ''}}) => {
