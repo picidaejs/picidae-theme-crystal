@@ -21,6 +21,14 @@ module.exports = {
         component: './About'
       },
       {
+        path: 'tags',
+        component: './Tags'
+      },
+      {
+        path: 'tags/:tag',
+        component: './TagDetail'
+      },
+      {
         path: '*',
         component: './Post'
       }
