@@ -3,7 +3,7 @@ import {Link} from 'react-router'
 import moment from 'moment'
 
 export default ({datetime, to, title, desc,author}) => {
-  return (<section className="overview-item">
+  return (<section className="overview-item body-width">
       <div className="ov-header">
         <h2 className="title">
           <Link to={to} title={title}>{title}</Link>

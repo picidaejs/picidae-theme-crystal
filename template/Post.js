@@ -55,7 +55,7 @@ const View = (props) => {
   return (
     <DocumentTitle title={`${props.pageData.meta.title} - ${themeConfig.title || 'Grass'}`}>
       <div>
-        <div className="post">
+        <div className="post body-width">
           <article className="post-block">
             <h1 className="title post-title">{props.pageData.meta.title}</h1>
             <div className="post-info">
@@ -84,7 +84,7 @@ const View = (props) => {
           </div>
           <Comment {...commentProps} />
         </div>
-        <Paginator prev={prev} prevTitle="上一篇" next={next} nextTitle="上一篇"/>
+        <Paginator prev={prev} prevTitle="上一篇" next={next} nextTitle="下一篇"/>
       </div>
     </DocumentTitle>
   )
