@@ -1,6 +1,5 @@
 // import getPureText from './getPureText'
 var getPureText = require('./getPureText')
-var config = require('./config')
 
 module.exports = {
   routes: {
@@ -30,7 +29,20 @@ module.exports = {
   },
   notFound: './NotFound',
   root: './template',
-  config: config,
+  config: {
+    pageSize: 6 ,
+    title: 'crystal',
+    blogName: 'crystal',           // the text in the header of blog pages
+    avatarUrl: 'avatar.png',   // put your avatar image under ~./extra/ 
+    gitment: {
+      owner: 'Claiyre',
+      repo: 'Claiyre.github.io',
+      oauth: {
+        client_id: 'xxx',
+        client_secret: 'xxxx'
+      }
+    }
+  },
   picker: function(metaData, gift, require) {
     var content = gift.content,
       filename = gift.filename,

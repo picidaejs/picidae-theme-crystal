@@ -309,6 +309,33 @@ footer{
   margin-left: 20px;
   padding: 10px 0 10px 40px;
 }
+
+// 目录
+
+@media (min-width: 800px) {
+  .picidae-toc {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 25%;
+    max-width: 200px;
+    padding-right: 5px;
+    background: rgba(238, 238, 238, 0.5);
+    border: 1px solid #bbb;
+    opacity: 0.8;
+    border-radius: 8px;
+  }
+  .picidae-toc>ul{
+    margin-left: -10px;
+  }
+  .picidae-toc>ul>li>ul{
+    margin-left: -15px;
+  }
+  .picidae-toc>ul>li>ul>li>ul{
+    margin-left: -15px;
+  }
+}
+
 // 分页器
 .paginator {
   .prev {
