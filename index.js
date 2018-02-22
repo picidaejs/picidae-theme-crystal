@@ -17,10 +17,6 @@ module.exports = {
         component: './Archive'
       },
       {
-        path: 'about',
-        component: './About'
-      },
-      {
         path: 'tags',
         component: './Tags'
       },

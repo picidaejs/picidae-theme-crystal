@@ -4,28 +4,30 @@ import {Link} from 'react-router'
 import DocumentTitle from 'react-document-title'
 import OverviewItem from './components/OverviewItem'
 import Paginator from './components/Paginator'
-// import CatalogueItem from './Comps/CatalogueItem'
-// import Paginator from './Comps/Paginator'
-// import SearchBar from './Comps/SearchBar'
 
 // get an array from all the articles according to search keyword
-export function group(data, name = '', keyword) {
+export function group(data) {
   let group = [];
-  if (keyword) {
-    keyword = Array.isArray(keyword) ? keyword : [keyword];
-  }
-  for (let k in data.meta) {
-    if (new RegExp('^' + name).test(k)) {
-      if (
-        keyword &&
-        (keyword.some(word => data.meta[k].title.includes(word))
-        || keyword.some(word => data.meta[k].desc.includes(word)))
-      ) {
-        group.push(Object.assign({}, data.meta[k], {_key: k}))
-      }
-      else if (!keyword) {
-        group.push(Object.assign({}, data.meta[k], {_key: k}))
-      }
+  // if (keyword) {
+  //   keyword = Array.isArray(keyword) ? keyword : [keyword];
+  // }
+  // for (let k in data.meta) {
+  //   if (new RegExp('^' + name).test(k)) {
+  //     if (
+  //       keyword &&
+  //       (keyword.some(word => data.meta[k].title.includes(word))
+  //       || keyword.some(word => data.meta[k].desc.includes(word)))
+  //     ) {
+  //       group.push(Object.assign({}, data.meta[k], {_key: k}))
+  //     }
+  //     else if (!keyword) {
+  //       group.push(Object.assign({}, data.meta[k], {_key: k}))
+  //     }
+  //   }
+  // }
+  for(let k in data.meta) {
+    if(k !== 'about') {
+      group.push(Object.assign({}, data.meta[k], {_key: k}))
     }
   }
   return group.sort((a, b) => {
@@ -41,7 +43,7 @@ export function group(data, name = '', keyword) {
 }
 
 export default ({data, render, publicPath, pluginData: {utils}, themeConfig: {pageSize = 2, title = 'Grass'}, params: {page = 1, keyword = ''}}) => {
-  let posts = group(data, void 0, keyword && decodeURIComponent(keyword).split(/[ -]/));
+  let posts = group(data);
   let pagination = {};
   if (!keyword) {
     page = Number(page);
@@ -59,7 +61,6 @@ export default ({data, render, publicPath, pluginData: {utils}, themeConfig: {pa
 
   const prev = pagination.prev ? '/posts/' + pagination.prev : null;
   const next = pagination.next ? '/posts/' + pagination.next : null;
-  console.log('archive', data);
   return (
     <DocumentTitle title={title}>
       <div>
