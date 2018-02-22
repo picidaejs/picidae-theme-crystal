@@ -1,9 +1,7 @@
 // import getPureText from './getPureText'
 var getPureText = require('./getPureText')
-var themeConfig = require('../../theme.config')
-if (!themeConfig) {
-  themeConfig = require('./config');
-}
+var config = require('./config')
+
 module.exports = {
   routes: {
     path: '/',
@@ -32,7 +30,7 @@ module.exports = {
   },
   notFound: './NotFound',
   root: './template',
-  config: themeConfig,
+  config: config,
   picker: function(metaData, gift, require) {
     var content = gift.content,
       filename = gift.filename,
