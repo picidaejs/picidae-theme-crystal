@@ -3,7 +3,6 @@ import {Link} from 'react-router'
 import DocumentTitle from 'react-document-title'
 
 export default function ({data, params}) {
-  console.log(data);
   const meta = data.meta;
   const target_tag = params.tag;
   const posts = [];

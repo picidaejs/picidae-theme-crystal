@@ -14,7 +14,6 @@ class Layout extends React.Component {
         this.instance.appendChild(s);
     }
     render() {
-      console.log('layout props:', this.props);
         const {publicPath, pluginData: {utils}, themeConfig} = this.props;
         return (
             <div className="wrap" ref={el => (this.instance = el)}>
